@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,43 @@
     <link rel="stylesheet" href="css/app.css">
     <title>QQ 音乐</title>
 </head>
+
 <body>
     <header id="header">
         <h1>QQ 音乐</h1>
         <img src="images/logo.png" alt="logo" id="logo">
     </header>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item active" data-role="tab" data-view=".rec-view">推荐</li>
+            <li class="nav-item" data-role="tab" data-view=".rank-view">排行榜</li>
+            <li class="nav-item" data-role="tab" data-view=".search-view">搜索</li>
+        </ul>
+    </nav>
+    <div>
+        <div class="rec-view">
+            <div class="qq-slider" id="slider"></div>
+            <div class="radio">
+                <h2 class="title">电台</h2>
+                <div class="list"></div>
+            </div>
+            <div class="song">
+                <h2 class="title">热门歌单</h2>
+                <div class="list"></div>
+            </div>
+        </div>
+        <div class="rank-view hide">
+            <ul class="topList">
+            </ul>
+        </div>
+        <div class="search-view hide">
+            搜索
+        </div>
+    </div>
+    <script src="/script/lazyload.js"></script>
+    <script src="/script/sliders.js"></script>
+    <script src="/script/tab.js"></script>
+    <script src="/script/app.js"></script>
 </body>
+
 </html>

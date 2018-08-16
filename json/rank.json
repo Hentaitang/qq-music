@@ -1,0 +1,346 @@
+{
+    "code": 0,
+    "subcode": 0,
+    "message": "",
+    "default": 0,
+    "data": {
+        "topList": [
+            {
+                "id": 4,
+                "listenCount": 19800000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_4_300_215547012.jpg",
+                "songList": [
+                    {
+                        "singername": "TFBOYS",
+                        "songname": "最好的那年"
+                    },
+                    {
+                        "singername": "G.E.M. 邓紫棋",
+                        "songname": "倒数"
+                    },
+                    {
+                        "singername": "龙迦娜",
+                        "songname": "鸵鸟"
+                    }
+                ],
+                "topTitle": "巅峰榜·流行指数",
+                "type": 0
+            },
+            {
+                "id": 26,
+                "listenCount": 19300000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_26_300_215308672.jpg",
+                "songList": [
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "Pull Up"
+                    },
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "You Can Be My GirlFriend"
+                    },
+                    {
+                        "singername": "火箭少女101",
+                        "songname": "卡路里"
+                    }
+                ],
+                "topTitle": "巅峰榜·热歌",
+                "type": 0
+            },
+            {
+                "id": 27,
+                "listenCount": 15200000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_27_300_215547012.jpg",
+                "songList": [
+                    {
+                        "singername": "TFBOYS",
+                        "songname": "最好的那年"
+                    },
+                    {
+                        "singername": "火箭少女101",
+                        "songname": "卡路里"
+                    },
+                    {
+                        "singername": "秦岚",
+                        "songname": "雪落下的声音"
+                    }
+                ],
+                "topTitle": "巅峰榜·新歌",
+                "type": 0
+            },
+            {
+                "id": 54,
+                "listenCount": 7642480,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_54_300_215643199.jpg",
+                "songList": [
+                    {
+                        "singername": "斯外戈",
+                        "songname": "Havana (Mix|Live)"
+                    },
+                    {
+                        "singername": "蔡维泽",
+                        "songname": "十九 (Live)"
+                    },
+                    {
+                        "singername": "邓典",
+                        "songname": "宝贝对不起 (Live)"
+                    }
+                ],
+                "topTitle": "勇闯天涯·巅峰榜·明日之子",
+                "type": 0
+            },
+            {
+                "id": 55,
+                "listenCount": 9900000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_55_300_215191234.jpg",
+                "songList": [
+                    {
+                        "singername": "艾热",
+                        "songname": "星球坠落 (Live)"
+                    },
+                    {
+                        "singername": "满舒克",
+                        "songname": "追梦 (Live)"
+                    },
+                    {
+                        "singername": "Al Rocco",
+                        "songname": "Rep That Culture (Live)"
+                    }
+                ],
+                "topTitle": "江小白YOLO·巅峰榜·中国新说唱",
+                "type": 0
+            },
+            {
+                "id": 56,
+                "listenCount": 10316130,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_56_300_215643506.jpg",
+                "songList": [
+                    {
+                        "singername": "JC陈泳彤",
+                        "songname": "说散就散 (Live)"
+                    },
+                    {
+                        "singername": "陈彼得",
+                        "songname": "Remember Me (Live)"
+                    },
+                    {
+                        "singername": "刘嘉慧",
+                        "songname": "时间轴 (Live)"
+                    }
+                ],
+                "topTitle": "巅峰榜·2018中国好声音",
+                "type": 0
+            },
+            {
+                "id": 28,
+                "listenCount": 19800000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_28_300_215059567.jpg",
+                "songList": [
+                    {
+                        "singername": "九局",
+                        "songname": "我已经爱上你"
+                    },
+                    {
+                        "singername": "王北车",
+                        "songname": "陷阱"
+                    },
+                    {
+                        "singername": "张思源",
+                        "songname": "小可爱与小领带"
+                    }
+                ],
+                "topTitle": "巅峰榜·网络歌曲",
+                "type": 0
+            },
+            {
+                "id": 5,
+                "listenCount": 4374140,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_5_300_215308672.jpg",
+                "songList": [
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "Pull Up"
+                    },
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "You Can Be My GirlFriend"
+                    },
+                    {
+                        "singername": "火箭少女101",
+                        "songname": "卡路里"
+                    }
+                ],
+                "topTitle": "巅峰榜·内地",
+                "type": 0
+            },
+            {
+                "id": 6,
+                "listenCount": 3471040,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_6_300_214983503.jpg",
+                "songList": [
+                    {
+                        "singername": "邵雨薇",
+                        "songname": "星月"
+                    },
+                    {
+                        "singername": "毕书尽",
+                        "songname": "无畏的明天"
+                    },
+                    {
+                        "singername": "邵雨薇",
+                        "songname": "怎样去爱"
+                    }
+                ],
+                "topTitle": "巅峰榜·港台",
+                "type": 0
+            },
+            {
+                "id": 3,
+                "listenCount": 10030010,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_3_300_214956931.jpg",
+                "songList": [
+                    {
+                        "singername": "Alan Walker",
+                        "songname": "Darkside"
+                    },
+                    {
+                        "singername": "Why Don't We",
+                        "songname": "Talk"
+                    },
+                    {
+                        "singername": "The Chainsmokers",
+                        "songname": "Side Effects"
+                    }
+                ],
+                "topTitle": "巅峰榜·欧美",
+                "type": 0
+            },
+            {
+                "id": 16,
+                "listenCount": 6565580,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_16_300_215365149.jpg",
+                "songList": [
+                    {
+                        "singername": "iKON (아이콘)",
+                        "songname": "KILLING ME (죽겠다)"
+                    },
+                    {
+                        "singername": "지코 (Zico)",
+                        "songname": "SoulMate"
+                    },
+                    {
+                        "singername": "유주 (俞宙)",
+                        "songname": "이 노래만 (就这首歌)"
+                    }
+                ],
+                "topTitle": "巅峰榜·韩国",
+                "type": 0
+            },
+            {
+                "id": 29,
+                "listenCount": 5675400,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_29_300_214891118.jpg",
+                "songList": [
+                    {
+                        "singername": "莫文蔚",
+                        "songname": "扶摇"
+                    },
+                    {
+                        "singername": "徐佳莹",
+                        "songname": "一爱难求"
+                    },
+                    {
+                        "singername": "张碧晨",
+                        "songname": "血如墨"
+                    }
+                ],
+                "topTitle": "巅峰榜·影视金曲",
+                "type": 0
+            },
+            {
+                "id": 17,
+                "listenCount": 1970000,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_17_300_215284511.jpg",
+                "songList": [
+                    {
+                        "singername": "久石譲 (Joe Hisaishi)",
+                        "songname": "Doves and the Boy~The Girl Who Fell from the Sky"
+                    },
+                    {
+                        "singername": "GARNiDELiA (ガルニデリア)",
+                        "songname": "アブラカダブラ ～avra K'Davarah～ (阿布拉卡达布拉)"
+                    },
+                    {
+                        "singername": "葵井歌菜",
+                        "songname": "Fall In Love"
+                    }
+                ],
+                "topTitle": "巅峰榜·日本",
+                "type": 0
+            },
+            {
+                "id": 201,
+                "listenCount": 425979,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/20150127163830.jpg",
+                "songList": [
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "Pull Up"
+                    },
+                    {
+                        "singername": "火箭少女101",
+                        "songname": "卡路里"
+                    },
+                    {
+                        "singername": "G.E.M. 邓紫棋",
+                        "songname": "倒数"
+                    }
+                ],
+                "topTitle": "巅峰榜·MV",
+                "type": 0
+            },
+            {
+                "id": 52,
+                "listenCount": 1771020,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_52_300_215377354.jpg",
+                "songList": [
+                    {
+                        "singername": "莉莉童 (LIJIN.)",
+                        "songname": "Tasting Syrup (Live)"
+                    },
+                    {
+                        "singername": "陈雪凝",
+                        "songname": "清守"
+                    },
+                    {
+                        "singername": "张羿凡",
+                        "songname": "许我余生"
+                    }
+                ],
+                "topTitle": "巅峰榜·腾讯音乐人原创榜",
+                "type": 0
+            },
+            {
+                "id": 36,
+                "listenCount": 3118340,
+                "picUrl": "http://y.gtimg.cn/music/common/upload/iphone_order_channel/toplist_36_300_200732018.jpg",
+                "songList": [
+                    {
+                        "singername": "胡赟兆",
+                        "songname": "啷个哩个啷"
+                    },
+                    {
+                        "singername": "郑阳亭",
+                        "songname": "你那么爱他"
+                    },
+                    {
+                        "singername": "武勇",
+                        "songname": "一次就好"
+                    }
+                ],
+                "topTitle": "巅峰榜·K歌金曲",
+                "type": 0
+            }
+        ]
+    }
+}
