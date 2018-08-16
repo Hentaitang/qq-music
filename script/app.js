@@ -1,35 +1,35 @@
-!function(){
+!function () {
 
     fetch('/json/rec.json')
-    .then(res => res.json())
-    .then(render)
+        .then(res => res.json())
+        .then(render)
 
     fetch('/json/rank.json')
-    .then(res => res.json())
-    .then(json => json.data.topList)
-    .then(renderTopList)
+        .then(res => res.json())
+        .then(json => json.data.topList)
+        .then(renderTopList)
 
-    function render(json){
+    function render(json) {
         renderSlider(json.data.slider)
         renderRadio(json.data.radioList)
         renderSong(json.data.songList)
         lazyload(document.querySelectorAll('.lazyload'))
     }
 
-    function renderSlider(slides){
+    function renderSlider(slides) {
         slides = slides.map(slide => {
-            return {link: slide.linkUrl, image: slide.picUrl}
+            return { link: slide.linkUrl, image: slide.picUrl }
         })
 
         new Slider({
-            el : document.querySelector('#slider'),
+            el: document.querySelector('#slider'),
             slides
         })
     }
 
-    function renderRadio(radios){
-        document.querySelector('.radio .list').innerHTML = radios.map(radio => 
-        `<div class="list-item">
+    function renderRadio(radios) {
+        document.querySelector('.radio .list').innerHTML = radios.map(radio =>
+            `<div class="list-item">
             <div class="list-media">
                 <img class="lazyload" data-src="${radio.picUrl}">
                 <span class="icon icon_play"></span>
@@ -38,8 +38,8 @@
         </div>`).join('')
     }
 
-    function renderSong(songs){
-        document.querySelector('.song .list').innerHTML = songs.map(song => 
+    function renderSong(songs) {
+        document.querySelector('.song .list').innerHTML = songs.map(song =>
             `<div class="list-item">
                 <div class="list-media">
                     <img class="lazyload" data-src="${song.picUrl}">
@@ -49,13 +49,13 @@
             </div>`).join('')
     }
 
-    function renderTopList(list){
-        document.querySelector('.topList').innerHTML = list.map(item => 
-        `
-        <li class="list-item">
+    function renderTopList(list) {
+        document.querySelector('.topList').innerHTML = list.map(item =>
+            `
+                <li class="list-item">
                     <div class="list-media">
                         <a href="#">
-                            <img src="${item.picUrl}">
+                            <img data-src="${item.picUrl}" class="lazyload">
                         </a>
                     </div>
                     <div class="list-title">
@@ -69,7 +69,7 @@
                                 <span>${item.songList[2].songname}</span>-${item.songList[2].singername}</p>
                         </div>
                     </div>
-                </li>
-        `)
+                </li>`).join('')
+        lazyload(document.querySelectorAll('.lazyload'))
     }
 }.call()
