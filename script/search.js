@@ -3,6 +3,7 @@ class Search{
         this.$el = el
         this.$input = this.$el.querySelector('#search')
         this.$input.addEventListener('keyup', this.onKeyUp.bind(this))
+        this.$input.addEventListener('click', this.onclick.bind(this))
         this.keyword = ''
         this.$songs = document.querySelector('#song-list')
         this.page = 1
@@ -22,8 +23,13 @@ class Search{
         
     }
 
+    onclick(event){
+        console.log(event)
+    }
+
     onKeyUp(event){
         let keyword = event.target.value
+        console.log(keyword)
         if(!keyword) return this.reset()
         if(event.key !== 'Enter') return
         this.search(keyword)
