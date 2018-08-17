@@ -1,15 +1,18 @@
 .qq-slider{
-    width: 100%;
-    overflow: hidden;
-    .qq-slider-wrap{
-        display: flex;
-        transition: .3s;
-    }
     .qq-slider-item{
-        > a{
+        a{
             display: block;
             img{
                 width: 100%;
+            }
+        }
+    }
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            width: 6px;
+            height: 6px;
+            &-active{
+                background: white;
             }
         }
     }

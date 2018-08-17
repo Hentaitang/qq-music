@@ -1,0 +1,24 @@
+.loading{
+    z-index: 2;
+    background: #F4F4F4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wraper{
+        margin-top: -100px; 
+        img{
+            margin: 0px auto 10px;
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+        p{
+            color: #8f8f8f;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    
+}

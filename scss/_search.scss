@@ -1,0 +1,66 @@
+.search-view{
+    
+    .search-bar{
+        padding: 10px;
+        .search-cont{
+            display: flex;
+            padding: 8px 12px 8px 35px;
+            background: #fff;
+            border-radius: 4px;
+            position: relative;
+            img{
+                position: absolute;
+                top: 9px;
+                left: 10px;
+                width: 18px;
+                height: 18px;
+            }
+            form{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                input{
+                    display: block;
+                    height: 20px;
+                    color: rgba(0,0,0,.3);
+                    outline-width: 0;
+                    border: none;
+                    width: 100%;
+                    padding-bottom: 2px;
+                }
+            }
+            
+        }
+    }
+    .song-list{
+        background: #fff;
+        .song-item{
+            height: 55px;
+            padding-left: 56px;
+            border-top: 1px solid #EBEBEB; 
+            position: relative;
+            .icon-image{
+                position: absolute;
+                top: 18px;
+                left: 18px;
+                width: 22px;
+                height: 20px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            .song-name{
+                margin: 10px 0 2px;
+                line-height: 18px;
+                font-size: 16px;
+                font-weight: normal;
+                color: #000;
+            }
+            .song-artist{
+                color: #808080;
+                font-size: 12px;
+            }
+        }
+    }
+}

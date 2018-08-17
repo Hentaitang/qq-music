@@ -1,3 +1,16 @@
 .hide{
     display: none;
 }
+
+.loading.hide{
+    display: none;
+}
+
+::placeholder{
+    color: rgba(0,0,0,.3);
+}
+
+.all-load{
+    height: 100vh;
+    overflow: hidden;
+}

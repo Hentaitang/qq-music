@@ -1,20 +1,46 @@
 !function () {
 
-    fetch('./json/rec.json')
+    fetch('https://qq-music-api.now.sh')
         .then(res => res.json())
         .then(render)
+        .then(loading)
 
     fetch('./json/rank.json')
         .then(res => res.json())
         .then(json => json.data.topList)
         .then(renderTopList)
 
+    function loading(){
+        let load = document.querySelector('#loading')
+        let body = document.querySelector('#body')
+        load.classList.add('hide')
+        body.classList.remove('all-load')
+    }
     function render(json) {
         renderSlider(json.data.slider)
+        let swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
         renderRadio(json.data.radioList)
         renderSong(json.data.songList)
         lazyload(document.querySelectorAll('.lazyload'))
     }
+
+    let search = new Search(document.querySelector('.search-view'))
 
     function renderSlider(slides) {
         slides = slides.map(slide => {
@@ -31,7 +57,7 @@
         document.querySelector('.radio .list').innerHTML = radios.map(radio =>
             `<div class="list-item">
             <div class="list-media">
-                <img class="lazyload" data-src="${radio.picUrl}">
+                <img class="lazyload" src="./images/default-pic.jpg" data-src="${radio.picUrl}">
                 <span class="icon icon_play"></span>
             </div>
             <div class="list-title">${radio.Ftitle}</div>
@@ -42,7 +68,7 @@
         document.querySelector('.song .list').innerHTML = songs.map(song =>
             `<div class="list-item">
                 <div class="list-media">
-                    <img class="lazyload" data-src="${song.picUrl}">
+                    <img class="lazyload" src="./images/default-pic.jpg" data-src="${song.picUrl}">
                     <span class="icon icon_play"></span>
                 </div>
                 <div class="list-title">${song.songListDesc}</div>

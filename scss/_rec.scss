@@ -15,6 +15,9 @@
             flex-basis: 40%;
             margin-right: 10px;
             margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             .list-media{
                 position: relative;
                 padding-top: 100%;
@@ -39,11 +42,22 @@
                 }
             }
             .list-title{
+                overflow: hidden;
+                text-overflow: ellipsis;
                 margin-bottom: 7px;
                 padding: 0 7px 5px;
                 height: 36px;
                 font-size: 14px;
             }
         }
+    }
+}
+
+.logo-footer{
+    img{
+        margin: 30px auto;
+        display: block;
+        width: 82px;
+        height: 24px;
     }
 }
