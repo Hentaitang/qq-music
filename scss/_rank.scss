@@ -1,27 +1,28 @@
 .rank-view{
     margin-top: 10px;
     .list-item{
-        display: flex;
+        position: relative;
         margin: 0 10px 10px 10px;
         .list-media{
             img{
                 width: 100px;
                 height: 100px;
                 background: #fff;
+                position: absolute;
+                top:0;
+                left: 0;
             }
         }
         .list-title{
+            padding-left: 100px;
             background: #fff;
             width: 100%;
             height: 100px;
             display: flex;
             align-items: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: "...";
             .title{
-                
-                margin: 0 10px 0 15px;
+                width: 100%;
+                padding: 0 10px 0 15px;
                 h3{
                     font-size: 16px;
                     color: #000;
@@ -36,6 +37,11 @@
                         margin-left: 8px;
                         margin-right: 5px;
                     }
+                }
+                p, h3{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
             }
         }

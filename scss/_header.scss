@@ -3,11 +3,23 @@
     align-items: center;
     height: $header-height;
     background: $header-background;
+    position: relative;
     h1{
         display: none;
     }
     #logo{
         height: $logo-height;
         margin-left: 10px; 
+    }
+    .play-button{
+        color: #fff;
+        font-size: 14px;
+        padding: 5px 12px;
+        background: #149c5a;
+        border-radius: 99px;
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 10px;
     }
 }

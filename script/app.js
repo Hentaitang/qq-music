@@ -98,4 +98,18 @@
                 </li>`).join('')
         lazyload(document.querySelectorAll('.lazyload'))
     }
+
+    let button = document.querySelector('#play-button')
+    let player = document.querySelector('#music-player')
+    let icon = document.querySelector('#icon-list')
+    let back = document.querySelector('#actions')
+    button.onclick = function(){
+        player.classList.add('show')
+    }
+    icon.onclick = function(){
+        player.classList.remove('show')
+    }
+    back.onclick = function(){
+        player.classList.remove('show')
+    }
 }.call()

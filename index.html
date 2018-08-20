@@ -13,6 +13,7 @@
     <header id="header">
         <h1>QQ 音乐</h1>
         <img src="images/logo.png" alt="logo" id="logo">
+        <div id="play-button" class="play-button">播放器</div>
     </header>
     <nav class="navbar">
         <ul class="nav-list">
@@ -51,12 +52,36 @@
                     <img src="./images/search.png">
                     <form action="">
                         <input id="search" type="search" placeholder="搜索歌曲、歌单、专辑">
-                        <input type="text" style="display:none;">
+                        <input type="text" style="display: none;">
                     </form>
                 </div>
             </div>
             <ul id="song-list" class="song-list">
             </ul>
+        </div>
+    </div>
+    <div id="music-player" class="music-player">
+        <div class="player-header">
+            <img class="album-image">
+            <div class="song-info">
+                <div class="song-name"></div>
+                <div class="song-artist"></div>
+            </div>
+            <span class="icon-active icon-play"></span>
+        </div>
+        <div class="player-lyrics"></div>
+        <div class="player-footer">
+            <div class="icon-list" id="icon-list"></div>
+            <div class="progress">
+                <div class="progress-time">00:00</div>
+                <div class="progress-bar">
+                    <div class="progress-action"></div>
+                </div>
+                <div class="progress-time">00:00</div>  
+            </div>
+            <div id="actions" class="actions">
+                <a href="#">回到首页</a>
+            </div>
         </div>
     </div>
     <script src="./script/vendor/swiper.min.js"></script>

@@ -6,6 +6,19 @@
     display: none;
 }
 
+.music-player.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.icon-active.icon-play{
+    background-position: 14px -154px;
+}
+
+.icon-active.icon-pause{
+    background-position: 15px -184px;
+}
+
 ::placeholder{
     color: rgba(0,0,0,.3);
 }
