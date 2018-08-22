@@ -69,23 +69,22 @@ class Search {
     append(songs) {
         if(songs.zhida.songnum){
             let header = `
-            <li class="song-item">
+            <a class="song-item" href="#">
                 <div class="artist-image"><img src="https://y.gtimg.cn/music/photo_new/T001R68x68M000${songs.zhida.singermid}.jpg?max_age=2592000"></div>
                 <div class="song-name ellipsis">${songs.zhida.singername}</div>
                 <div class="song-artist ellipsis"><span>单曲：${songs.zhida.songnum}</span><span>专辑：${songs.zhida.albumnum}</span></div>
-            </li>`
+            </a>`
             this.$songs.insertAdjacentHTML('beforeend', header)
         }
         
         let html = songs.song.list.map(song => `
-            <li class="song-item">
+            <a class="song-item" 
+            href="#player?singer=${song.singer.map(s => s.name).join(' / ')}&albummid=${song.albummid}&songname=${song.songname}&songid=${song.songid}&duration=${song.interval}&songmid=${song.songmid}">
                 <div class="icon-image"><img src="./images/search-sprite.png"></div>
                 <div class="song-name ellipsis">${song.songname}</div>
                 <div class="song-artist ellipsis">${song.singer.map(s => s.name).join(' / ')}</div>
-            </li>`).join('')
-        this.$songs.insertAdjacentHTML('beforeend', html)
-
-        
+            </a>`).join('')
+        this.$songs.insertAdjacentHTML('beforeend', html)  
         
     }
 }

@@ -56,8 +56,7 @@
                     </form>
                 </div>
             </div>
-            <ul id="song-list" class="song-list">
-            </ul>
+            <div id="song-list" class="song-list"></div>
         </div>
     </div>
     <div id="music-player" class="music-player">
@@ -72,20 +71,17 @@
         <div class="player-lyrics"></div>
         <div class="player-footer">
             <div class="icon-list" id="icon-list"></div>
-            <div class="progress">
-                <div class="progress-time">00:00</div>
-                <div class="progress-bar">
-                    <div class="progress-action"></div>
-                </div>
-                <div class="progress-time">00:00</div>  
-            </div>
+            <div class="progress"></div>
             <div id="actions" class="actions">
-                <a href="#">回到首页</a>
+                <a id="button" href="#">隐藏播放器</a>
             </div>
         </div>
     </div>
     <script src="./script/vendor/swiper.min.js"></script>
     <script src="./script/search.js"></script>
+    <script src="./script/music_player.js"></script>
+    <script src="./script/progress_bar.js"></script>
+    <script src="./script/lyrics_player.js"></script>
     <script src="./script/app.js"></script>
     <script src="./script/lazyload.js"></script>
     <script src="./script/sliders.js"></script>

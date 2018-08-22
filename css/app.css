@@ -274,6 +274,7 @@ p {
   background: #fff;
 }
 .search-view .song-list .song-item {
+  display: block;
   height: 55px;
   padding-left: 56px;
   border-top: 1px solid #EBEBEB;
@@ -372,6 +373,16 @@ p {
 }
 .music-player .player-header .song-info {
   flex: 1;
+  color: #fff;
+  overflow: hidden;
+}
+.music-player .player-header .song-info .song-name {
+  font-size: 18px;
+  height: 30px;
+}
+.music-player .player-header .song-info .song-artist {
+  font-size: 14px;
+  height: 21px;
 }
 .music-player .player-header .icon-active {
   margin-right: 10px;
@@ -386,7 +397,21 @@ p {
 }
 .music-player .player-lyrics {
   flex: 1;
+  overflow: hidden;
+  color: #fff;
   margin: 36px 0 60px 0;
+}
+.music-player .player-lyrics .player-lyrics-lines {
+  transition: 0.5s;
+}
+.music-player .player-lyrics .player-lyrics-lines .player-lyrics-line.active {
+  color: #31c27c;
+}
+.music-player .player-lyrics .player-lyrics-lines .player-lyrics-line {
+  padding: 11px 15px 10px;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 .music-player .player-footer {
   position: relative;

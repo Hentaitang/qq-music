@@ -23,6 +23,16 @@
         }
         .song-info{
             flex: 1;
+            color: #fff;
+            overflow: hidden;
+            .song-name{
+                font-size: 18px;
+                height: 30px;
+            }
+            .song-artist{
+                font-size: 14px;
+                height: 21px;
+            }
         }
         .icon-active{
             margin-right: 10px;
@@ -38,7 +48,21 @@
     }
     .player-lyrics{
         flex: 1;
+        overflow: hidden;
+        color: #fff;
         margin: 36px 0 60px 0;
+        .player-lyrics-lines{
+            transition: .5s;
+            .player-lyrics-line.active{
+                color: #31c27c;
+            }
+            .player-lyrics-line{
+                padding: 11px 15px 10px;
+                text-align: center;
+                font-size: 16px;
+                color: rgba(255,255,255,0.6);
+            }
+        } 
     }
     .player-footer{
         position: relative;

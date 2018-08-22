@@ -41,6 +41,30 @@
     }
 
     let search = new Search(document.querySelector('.search-view'))
+    let Musicplayer = new MusicPlayer(document.querySelector('#music-player'))
+    let button = document.querySelector('#play-button')
+    button.addEventListener('click', ()=>{Musicplayer.show()})
+
+    window.addEventListener('hashchange', onHashChange)
+
+    function onHashChange(){
+        if(/^#player\?.+/.test(location.hash)){
+            let index = location.hash.indexOf('?') + 1
+            let hash = decodeURIComponent(location.hash).slice(index)
+            let matches = hash.match(/(\w+)=([^&]+)/g)
+            // let options = matches && matches.reduce((res, cur)=>{
+            //     let arr = cur.split('=')
+            //     res[arr[0]] = arr[1]
+            //     return res
+            // }, {})
+            let options = matches.reduce((res, cur)=>{
+                let arr = cur.split('=')
+                res[arr[0]] = arr[1]
+                return res
+            }, {})
+            Musicplayer.play(options)
+        }
+    }
 
     function renderSlider(slides) {
         slides = slides.map(slide => {
@@ -97,19 +121,5 @@
                     </div>
                 </li>`).join('')
         lazyload(document.querySelectorAll('.lazyload'))
-    }
-
-    let button = document.querySelector('#play-button')
-    let player = document.querySelector('#music-player')
-    let icon = document.querySelector('#icon-list')
-    let back = document.querySelector('#actions')
-    button.onclick = function(){
-        player.classList.add('show')
-    }
-    icon.onclick = function(){
-        player.classList.remove('show')
-    }
-    back.onclick = function(){
-        player.classList.remove('show')
     }
 }.call()
