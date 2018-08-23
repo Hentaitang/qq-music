@@ -11,7 +11,9 @@
     display: flex;
     flex-direction: column;
     transition: .3s;
+    overflow: hidden;
     .player-header{
+        z-index: 2;
         background: rgba(0, 0, 0, 0.1);
         padding: 15px;
         display: flex;
@@ -47,6 +49,7 @@
         }
     }
     .player-lyrics{
+        z-index: 2;
         flex: 1;
         overflow: hidden;
         color: #fff;
@@ -65,6 +68,7 @@
         } 
     }
     .player-footer{
+        z-index: 2;
         position: relative;
         .icon-list{
             background-image: url('../images/sprite_play.png');
@@ -120,5 +124,18 @@
                 background-repeat: no-repeat;
             }
         }
+    }
+    .background-image{
+        background-image: url('http://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg'); 
+        background-position: center center;
+        z-index: 1;
+        background-size: cover;
+        filter: blur(15px); 
+        transform: scale(1.15);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }

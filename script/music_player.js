@@ -11,6 +11,15 @@ class MusicPlayer {
         this.$audio = document.createElement('audio')
         // this.$audio.loop = true
         this.$audio.id = `player-${Math.floor(Math.random() * 100)}`
+        this.$audio.addEventListener('ended', ()=>{
+            this.lyrics.reset()
+            this.progress.reset()
+            let playButton = document.querySelector('.icon-pause')
+            if(playButton){
+                playButton.classList.add('icon-play')
+                playButton.classList.remove('icon-pause')
+            }
+        })
         body.appendChild(this.$audio)
     }
 
@@ -50,14 +59,22 @@ class MusicPlayer {
 
     hide(target) {
         target.parentNode.parentNode.classList.remove('show')
+        let body = document.querySelector('#body')
+        body.classList.remove('all-load')
     }
 
     play(options = {}) {
         if (!options) return
         this.$el.querySelector('.album-image').src = `https://y.gtimg.cn/music/photo_new/T002R150x150M000${options.albummid}.jpg`
+        this.$el.querySelector('.background-image').style.backgroundImage = `url("https://y.gtimg.cn/music/photo_new/T002R150x150M000${options.albummid}.jpg")`
         this.$el.querySelector('.song-name').innerText = `${options.songname}`
         this.$el.querySelector('.song-artist').innerText = `${options.singer}`
         this.progress.reset(options.duration)
+        let playButton = document.querySelector('.icon-pause')
+        if(playButton){
+            playButton.classList.add('icon-play')
+            playButton.classList.remove('icon-pause')
+        }
 
         if (options.songid) {
             this.$audio.src = `http://ws.stream.qqmusic.qq.com/C100${options.songmid}.m4a?fromtag=0&guid=126548448`
@@ -72,5 +89,7 @@ class MusicPlayer {
 
     show() {
         this.$el.classList.add('show')
+        let body = document.querySelector('#body')
+        body.classList.add('all-load')
     }
 }

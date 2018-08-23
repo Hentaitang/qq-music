@@ -161,36 +161,6 @@ p {
   background: #31c27c;
 }
 
-.hide {
-  display: none;
-}
-
-.loading.hide {
-  display: none;
-}
-
-.music-player.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.icon-active.icon-play {
-  background-position: 14px -154px;
-}
-
-.icon-active.icon-pause {
-  background-position: 15px -184px;
-}
-
-::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.all-load {
-  height: 100vh;
-  overflow: hidden;
-}
-
 .rank-view {
   margin-top: 10px;
 }
@@ -321,6 +291,38 @@ p {
 .search-view .song-list .song-item .song-artist span {
   margin-right: 10px;
 }
+.search-view .song-list p {
+  text-align: center;
+  color: #808080;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  padding: 21px 0;
+}
+.search-view .song-list .searching {
+  color: #808080;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  padding: 19.5px 0;
+  display: flex;
+  justify-content: center;
+}
+.search-view .song-list .searching span {
+  display: block;
+  margin-left: 10px;
+}
+.search-view .song-list .searching img {
+  width: 20px;
+  height: 20px;
+  animation: rotate 1s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .loading {
   z-index: 2;
@@ -359,8 +361,10 @@ p {
   display: flex;
   flex-direction: column;
   transition: 0.3s;
+  overflow: hidden;
 }
 .music-player .player-header {
+  z-index: 2;
   background: rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
@@ -396,6 +400,7 @@ p {
   width: 40px;
 }
 .music-player .player-lyrics {
+  z-index: 2;
   flex: 1;
   overflow: hidden;
   color: #fff;
@@ -414,6 +419,7 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 .music-player .player-footer {
+  z-index: 2;
   position: relative;
 }
 .music-player .player-footer .icon-list {
@@ -469,6 +475,49 @@ p {
   background-size: 50px 405px;
   background-position: 5px -343px;
   background-repeat: no-repeat;
+}
+.music-player .background-image {
+  background-image: url("http://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg");
+  background-position: center center;
+  z-index: 1;
+  background-size: cover;
+  filter: blur(15px);
+  transform: scale(1.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.loading.hide {
+  display: none;
+}
+
+.music-player.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.icon-active.icon-play {
+  background-position: 14px -154px;
+}
+
+.icon-active.icon-pause {
+  background-position: 15px -184px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.all-load {
+  height: 100vh;
+  overflow: hidden;
 }
 
 body {

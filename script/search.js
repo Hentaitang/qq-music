@@ -48,6 +48,8 @@ class Search {
         if (this.fetching) return
         this.fetching = true
         this.keyword = keyword
+        let searching = '<div class="searching"><img src="../images/icon_loading.png"><span>正在加载更多...</span></div>'
+        this.$songs.insertAdjacentHTML('beforeend', searching)
         fetch(`https://qq-music-api.now.sh/search?keyword=${this.keyword}&page=${page || this.page}`)
             .then(res => res.json())
             .then(json => {
@@ -57,12 +59,6 @@ class Search {
                 return json.data
             })
             .then(songs => this.append(songs))
-            .then(()=>{
-                if(this.nomore){
-                    let end = '<p>已加载全部</p>'
-                    this.$songs.insertAdjacentHTML('beforeend', end)
-                }
-            })
             .then(() => { this.fetching = false })
     }
 
@@ -85,6 +81,14 @@ class Search {
                 <div class="song-artist ellipsis">${song.singer.map(s => s.name).join(' / ')}</div>
             </a>`).join('')
         this.$songs.insertAdjacentHTML('beforeend', html)  
+
+        if(this.nomore){
+            let end = '<p>已加载全部</p>'
+            this.$songs.insertAdjacentHTML('beforeend', end)
+        }
         
+        this.$songs.querySelector('.searching').classList.add('hide')
+        this.$songs.querySelector('.searching.hide').style.display = 'none'
+        this.$songs.querySelector('.searching.hide').classList.remove('searching')
     }
 }

@@ -45,6 +45,7 @@
     let button = document.querySelector('#play-button')
     button.addEventListener('click', ()=>{Musicplayer.show()})
 
+    onHashChange()
     window.addEventListener('hashchange', onHashChange)
 
     function onHashChange(){

@@ -82,5 +82,33 @@
                 }
             }
         }
+        p{
+            text-align: center;
+            color: #808080;
+            font-size: 12px;
+            background-color: #f4f4f4;
+            padding: 21px 0;
+        }
+        .searching{
+            color: #808080;
+            font-size: 12px;
+            background-color: #f4f4f4;
+            padding: 19.5px 0;
+            display: flex;
+            justify-content: center;
+            span{
+                display: block;
+                margin-left: 10px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                animation: rotate 1s infinite linear;
+            }
+            @keyframes rotate{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(360deg);}
+            }
+        }
     }
 }

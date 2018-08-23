@@ -24,8 +24,8 @@ class LyricsPlayer{
         for(let i = this.index + 1; i < this.lyrics.length; i++){
             let seconds = this.getSeconds(this.lyrics[i])
             if(
-                this.elapsed === seconds //&&
-                // (!this.lyrics[i + 1] || this.elapsed < this.getSeconds(this.lyrics[i + 1]))
+                this.elapsed === seconds &&
+                (!this.lyrics[i + 1] || this.elapsed < this.getSeconds(this.lyrics[i + 1]))
             ){
                 this.$lines.children[this.index].classList.remove('active')
                 this.$lines.children[i].classList.add('active')
@@ -47,17 +47,20 @@ class LyricsPlayer{
     }
 
     reset(text){
-        this.pause()
-        this.index = 0
-        this.elapsed = 0
         if(text){
             this.text = this.formatText(text) || ''
             this.lyrics = this.text.match(/^\[\d{2}:\d{2}\.\d{2}\](.+)$/gm) || []
             if(this.lyrics.length){
                 this.render()
-                this.$lines.children[this.index].classList.add('active')
+                this.$lines.children[this.index].classList.remove('active')
+                this.$lines.children[0].classList.add('active')
+                this.$lines.style.transform = 'translateY(0px)'
+
             }
         }
+        this.pause()
+        this.index = 0
+        this.elapsed = 0
     }
     
     restart(){
