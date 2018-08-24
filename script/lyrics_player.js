@@ -21,7 +21,7 @@ export class LyricsPlayer{
 
     update(){
         this.elapsed = Math.round(this.$audio.currentTime)
-        if(this.index === this.lyrics.length - 1) return this.reset()
+        if(this.index === this.lyrics.length - 1) return
         for(let i = this.index + 1; i < this.lyrics.length; i++){
             let seconds = this.getSeconds(this.lyrics[i])
             if(
@@ -48,6 +48,12 @@ export class LyricsPlayer{
     }
 
     reset(text){
+        if(this.$lines.children[0]){
+            this.$lines.children[this.index].classList.remove('active')
+            this.$lines.children[0].classList.add('active')
+            this.$lines.style.transform = 'translateY(0px)'
+            console.log(this.$lines.children)
+        }
         if(text){
             this.text = this.formatText(text) || ''
             this.lyrics = this.text.match(/^\[\d{2}:\d{2}\.\d{2}\](.+)$/gm) || []
@@ -56,7 +62,6 @@ export class LyricsPlayer{
                 this.$lines.children[this.index].classList.remove('active')
                 this.$lines.children[0].classList.add('active')
                 this.$lines.style.transform = 'translateY(0px)'
-
             }
         }
         this.pause()
