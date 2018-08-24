@@ -48,7 +48,7 @@ export class Search {
         if (this.fetching) return
         this.fetching = true
         this.keyword = keyword
-        let searching = '<div class="searching"><img src="../images/icon_loading.png"><span>正在加载更多...</span></div>'
+        let searching = '<div class="searching"><img src="./images/icon_loading.png"><span>正在加载更多...</span></div>'
         this.$songs.insertAdjacentHTML('beforeend', searching)
         fetch(`https://qq-music-api.now.sh/search?keyword=${this.keyword}&page=${page || this.page}`)
             .then(res => res.json())
