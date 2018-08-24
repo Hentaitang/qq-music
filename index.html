@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="script/vendor/swiper.min.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="dist/app.css">
     <title>QQ音乐</title>
 </head>
 <body class="all-load" id="body">
@@ -22,7 +22,7 @@
         </ul>
     </nav>
     <div class="all-wraper">
-        <div class="rec-view">
+        <div id="rec-view" class="rec-view">
             <div id="loading" class="loading">
                 <div class="wraper">
                     <img src="./images/loading.gif">
@@ -42,7 +42,7 @@
                 <img src="./images/logo-footer.png">
             </div>
         </div>
-        <div class="rank-view hide">
+        <div id="rank-view" class="rank-view hide">
             <ul class="topList"></ul>
         </div>
         <div class="search-view hide">
@@ -78,14 +78,8 @@
         <div class="background-image"></div>
     </div>
     <script src="./script/vendor/swiper.min.js"></script>
-    <script src="./script/search.js"></script>
-    <script src="./script/music_player.js"></script>
-    <script src="./script/progress_bar.js"></script>
-    <script src="./script/lyrics_player.js"></script>
-    <script src="./script/app.js"></script>
-    <script src="./script/lazyload.js"></script>
-    <script src="./script/sliders.js"></script>
-    <script src="./script/tab.js"></script>
+    <script type="module" src="script/app.js"></script>
+    <script nomodule src="./dist/app.js"></script>
 </body>
 
 </html>

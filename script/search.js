@@ -1,4 +1,4 @@
-class Search {
+export class Search {
     constructor(el) {
         this.$el = el
         this.$input = this.$el.querySelector('#search')
@@ -33,7 +33,7 @@ class Search {
 
     onKeyUp(event) {
         let keyword = event.target.value
-        if (event.key !== 'Enter') return
+        if (event.keyCode !== 13) return
         this.search(keyword)
     }
 

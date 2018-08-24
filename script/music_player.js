@@ -1,9 +1,12 @@
-class MusicPlayer {
+import { LyricsPlayer } from './lyrics_player.js'
+import { ProgressBar } from './progress_bar.js'
+
+export class MusicPlayer {
     constructor(el) {
         this.$el = el
         this.$el.addEventListener('click', this)
         this.createAudio()
-        this.lyrics = new LyricsPlayer(document.querySelector('.player-lyrics'))
+        this.lyrics = new LyricsPlayer(document.querySelector('.player-lyrics'), this.$audio)
         this.progress = new ProgressBar(document.querySelector('.progress'))
     }
 
