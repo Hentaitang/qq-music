@@ -1,5 +1,6 @@
 export function lazyload(image) {
     let imgs = [].slice.call(image) // Array.from(images)
+    console.log(typeof(image))
 
     if ('IntersectionObserver' in window) {
         let observer = new IntersectionObserver(function (entries) {
